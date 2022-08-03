@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Journal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,600,700%7CRanga:400,700&display=swap">
+    <link rel="stylesheet" href="open-weather-icons.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bg-overlay">
+	</div>
+	<div class="app">
+      <div class="holder headline">
+        <h1>weather journal app</h1>
+      </div>
+      <div class="holder">
+        <label for="zip">Enter Zipcode here</label>
+        <input type="text" id="zip" placeholder="Enter zip code here">
+      </div>
+      <div class="holder">
+        <label for="feelings">How are you feeling today?</label>
+        <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="3" cols="50"></textarea>
+        <button id="generate" type="submit">generate</button>
+      </div>
+      <div class="holder entry">
+        <h2 class="title">most recent entry</h2>
+        <div id="entryHolder" class="entry__holder">
+          <section class="date-holder">
+            <h3 class="entry__label">date</h3>
+            <div class="date__icon">
+              <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <svg version="1.1" id="Capa_1"
+                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                   x="0px" y="0px" viewBox="0 0 512 512"
+                   style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
+                                x1="256" y1="514" x2="256" y2="2" gradientTransform="matrix(1 0 0 -1 0 514)">
+                    <stop  offset="0" style="stop-color:#2AF598"/>
+                    <stop  offset="1" style="stop-color:#009EFD"/>
+                </linearGradient>
+                <path style="fill:url(#SVGID_1_);" d="M452,40h-24V0h-40v40H124V0H84v40H60C26.916,40,0,66.916,0,100v352c0,33.084,26.916,60,60,60
+                    h392c33.084,0,60-26.916,60-60V100C512,66.916,485.084,40,452,40z M60,80h24v40h40V80h264v40h40V80h24c11.028,0,20,8.972,20,20v48
+                    H40v-48C40,88.972,48.972,80,60,80z M452,472H60c-11.028,0-20-8.972-20-20V188h432v264C472,463.028,463.028,472,452,472z M76,230h40
+                    v40H76V230z M156,230h40v40h-40V230z M236,230h40v40h-40V230z M316,230h40v40h-40V230z M396,230h40v40h-40V230z M76,310h40v40H76
+                    V310z M156,310h40v40h-40V310z M236,310h40v40h-40V310z M316,310h40v40h-40V310z M76,390h40v40H76V390z M156,390h40v40h-40V390z
+                     M236,390h40v40h-40V390z M316,390h40v40h-40V390z M396,310h40v40h-40V310z"/>
+                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+              </svg>
+            </div>
+            <div id="date"></div>
+          </section>
+          <section class="temp-holder">
+            <h3 class="entry__label">Temperature</h3>
+            <div class="temp__icon">
+              <img id="tempIcon" src="images/temperature.png" alt="Weather Icon">
+            </div>
+            <div id="temp"></div>
+          </section>
+          <section class="feel-holder">
+            <h3 class="entry__label">feeling</h3>
+            <div id="emoji" class="feel__icon">
+				<img src="images/feelings.png" alt="Feelings Icon">
+			  </div>
+            <div id="content"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

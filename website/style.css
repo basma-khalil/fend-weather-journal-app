@@ -1,0 +1,279 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+img,
+svg {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.bg-overlay {
+	position: relative;
+	background: url("images/clouds600.jpg") top left/cover repeat fixed;
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
+	width: 100%;
+	height: 100vh;
+	-webkit-animation: slide 120s linear infinite;
+	animation: slide 120s linear infinite;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -600px 0; }
+}
+
+.app {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+    height:100vh;
+	padding: 1em;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.holder {
+	width: 70%;
+	margin-bottom: 1.3em;
+	padding: 1em;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 0.4em;
+	-webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.entry {
+	margin-bottom: 0;
+}
+
+.title {
+	margin-bottom: 0.5em;
+}
+
+.entry__holder{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.entry__label {
+	margin-bottom: 0.4em;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+
+.date-holder,
+.temp-holder,
+.feel-holder {
+	width: 100%;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 0.3em;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.date__icon,
+.temp__icon,
+.feel__icon {
+	margin-bottom: 0.3em;
+}
+
+.date__icon {
+	margin: 0.5em auto;
+}
+
+.date__icon svg {
+	width: 3rem;
+}
+
+.temp__icon img {
+	margin: -23px auto;
+}
+
+.feel__icon {
+	font-size: 1.7em;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+label {
+    display:block;
+	margin-bottom: 0.5em;
+    font-size: 27px;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 0.5em;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+	border-radius: 0.4em;
+}
+
+input {
+    display:block;
+}
+
+button {
+	display: block;
+	margin: 0.5em auto 0.1em;
+	padding: 0.2em 1em;
+    background: transparent;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+    border: 2px solid #fff;
+	border-radius: 0.2em;
+	-webkit-transition: background 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+	transition: background 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+	transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+	-webkit-box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.3);
+	box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+button:hover {
+	background: rgba(255, 255, 255, 0.3);
+	-webkit-transform: translateY(1px);
+	transform: translateY(1.5px);
+	-webkit-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset style for HTML element on active to have no border */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text */
+::-webkit-input-placeholder { /* Firefox, Chrome, Opera */ 
+    color: #eee; 
+    font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder { /* Firefox, Chrome, Opera */ 
+    color: #eee; 
+    font-family: 'Oswald', sans-serif;
+}
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #eee; 
+    font-family: 'Oswald', sans-serif;
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #eee; 
+    font-family: 'Oswald', sans-serif;
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #eee; 
+    font-family: 'Oswald', sans-serif;
+}
+
+/* ---- Media Query ---- */
+@media screen and (min-width: 600px) {
+	.bg-overlay {
+		background: url("images/clouds900.jpg") top left/cover repeat fixed;
+	}
+
+	@-webkit-keyframes slide {
+		to { background-position: -900px 0; }
+	}
+
+	.holder {
+		width: 60%;
+	}
+
+	button {
+		padding: 0.2em 1.5em;
+		border: 3px solid #fff;
+	}
+
+	.date-holder,
+	.temp-holder,
+	.feel-holder {
+		width: 30%;
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.date__icon,
+	.temp__icon,
+	.feel__icon {
+		min-height: 40%;
+	}
+	
+	.temp-holder .entry__label {
+		font-size: 3vw;
+	}
+
+	#date {
+		font-size: 2.5vw;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.bg-overlay {
+		background: url("images/clouds2000.jpg") top left/cover repeat fixed;
+	}
+
+	@-webkit-keyframes slide {
+		to { background-position: -2000px 0; }
+	}
+
+	.holder {
+		width: 50%;
+	}
+
+	button {
+		padding: 0.2em 3em;
+	}
+}
